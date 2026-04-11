@@ -6,6 +6,8 @@
 // Pilar 1 - ABSTRAÇÃO
 // Modelar apenas o que importa: marca, modelo, ano, placa, preço base
 // Metodo calcularDiaria() abstrato, pois cada vículo tera sua propria diaria (calculo)
+
+// ATRIBUTOS PROTEGIDOS -> Encapsulamentos
 public abstract class Veiculo {
     private String marca;
     private String modelo;
@@ -13,6 +15,7 @@ public abstract class Veiculo {
     private String placa;
     private double precoBase;
 
+    // Construtor da classe
     public Veiculo(String marca, String modelo, int ano, String placa, double precoBase){
         this.marca = marca;
         this.modelo = modelo;
@@ -57,10 +60,14 @@ public abstract class Veiculo {
         this.precoBase = precoBase;
     }
 
-    public String toString(){
-        return marca + " " + modelo + " (" + ano + ")";
+    public String exibirDados(){
+        return marca + " " + modelo + " (" + ano + ") " + placa + " R$" + precoBase + " ";
     }
+
 }
+
+
+
 
 // PILAR 3 - HERANÇA
 // Carro e moto herdam tudo de Veiculo, mas cada um adiciona seus proprios atributos
@@ -69,11 +76,4 @@ public abstract class Veiculo {
 // Carro -> qtdPortas (atributo)
 // metodo calcularDiaria -> se qtdPortas >=4 acrescimo de 20%
 
-abstract class Carro extends Veiculo {
-    private int qtdPortas;
 
-    public Carro(String marca, String modelo, int ano, String placa, double precoBase, int qtdPortas){
-        super(marca, modelo, ano, placa, precoBase);
-        this.qtdPortas = qtdPortas;
-    }
-}

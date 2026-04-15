@@ -29,7 +29,7 @@ public abstract class Veiculo {
 
     // Pilar 2 - ENCAPSULAMENTO
     // MODIFICADORES VIA GETTERS E SETTERS
-    // O SETTER PREÇOBASE TEM VALIDAÇÃO: NÃO ACEITA VALORES NEGATIVOS
+    // O SETTER PRECOBASE TEM VALIDAÇÃO: NÃO ACEITA VALORES NEGATIVOS
 
     public String getMarca() {
         return marca;
